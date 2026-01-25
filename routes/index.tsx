@@ -111,7 +111,7 @@ export default define.page(function Home() {
 			<section className="py-8 px-16 text-center">
 				<h1 className="text-3xl text-center font-bold pb-4">Join the Community</h1>
 				<i className="text-gray-400">
-					Cephalon Navis is backed by the WFCD a community of Tenno who develop apps and tools for the Warframe
+					Cephalon Navis is supported by the WFCD a community of Tenno who develop apps and tools for the Warframe
 					community.
 				</i>
 				<div className="flex flex-row justify-center py-8">
