@@ -1,20 +1,23 @@
 interface ButtonProps {
-	targetId: string;
-	className?: string;
-	type: 'button' | 'submit' | 'reset';
+	target: string;
+	type?: 'primary' | 'secondary';
 	children: preact.ComponentChildren;
 }
 
-export default function Button(props: ButtonProps) {
+export default function Button({ target: targetId, type = 'primary', children }: ButtonProps) {
 	const handleClick = () => {
-		document
-			.getElementById(props.targetId)
-			?.scrollIntoView({ behavior: 'smooth', block: 'start' });
+		if (targetId.startsWith('http')) {
+			globalThis.open(new URL(targetId), '_blank', 'noopener=true');
+		}
+
+		document.getElementById(targetId)?.scrollIntoView({ behavior: 'smooth', block: 'start' });
 	};
 
+	const className = `btn md:btn-wide btn-primary ${type === 'primary' ? '' : 'btn-outline'}`;
+
 	return (
-		<button className={props.className} type={props.type} onClick={handleClick}>
-			{props.children}
+		<button className={className} type="button" onClick={handleClick} title={targetId}>
+			{children}
 		</button>
 	);
 }

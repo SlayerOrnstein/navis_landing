@@ -1,6 +1,6 @@
 import { Head } from "fresh/runtime";
-import { define } from "../utils/utils.ts";
 import TopBar from "../components/TopBar.tsx";
+import { define } from "../utils/utils.ts";
 
 export default define.page(function App({ Component }) {
   return (

@@ -15,25 +15,17 @@ export default function DropZone() {
 			<div
 				onDragOver={handleDragOver}
 				onDrop={handleDrop}
-				class={`flex justify-center items-center size-80 ${
+				class={`flex justify-center items-center size-40 lg:size-80 ${
 					codeSignal.value ? '' : 'border-2 border-dashed hover:cursor-pointer'
 				} rounded-xl border-secondary `}
 			>
 				{codeSignal.value ? (
 					<img src={codeSignal.value.code} alt={codeSignal.value.id} class="rounded-xl" />
 				) : (
-					<div>
-						<label for="file-input" class="hover:cursor-pointer">
-							Drag EE.log
-						</label>
-						<input
-							id="file-input"
-							type="file"
-							class="sr-only"
-							accept=".log"
-							onInput={processInput}
-						/>
-					</div>
+					<label for="file-input" class="hover:cursor-pointer text-gray-400/0 md:text-gray-400">
+						Drag EE.log
+						<input id="file-input" type="file" class="sr-only" accept=".log" onInput={processInput} />
+					</label>
 				)}
 			</div>
 		</div>
