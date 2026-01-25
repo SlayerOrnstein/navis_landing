@@ -16,14 +16,14 @@ export default define.page(function App({ Component }) {
 				<meta property="og:type" content="website" />
 				<meta property="og:title" content="Cephalon Navis" />
 				<meta property="og:description" content="An app inspired by Warframe Hub" />
-				<meta property="og:image" content="banner.jpg" />
+				<meta property="og:image" content="/banner.jpg" />
 
 				<meta name="twitter:card" content="summary_large_image" />
 				<meta property="twitter:domain" content="navis.minilabs.dev" />
 				<meta property="twitter:url" content="https://navis.minilabs.dev/" />
 				<meta name="twitter:title" content="Cephalon Navis" />
 				<meta name="twitter:description" content="An app inspired by Warframe Hub" />
-				<meta name="twitter:image" content="banner.jpg" />
+				<meta name="twitter:image" content="/banner.jpg" />
 			</head>
 			<body>
 				<Head>
