@@ -1,23 +1,25 @@
-a {
-  color: rgb(228 225 233);
+#faq {
+	a {
+		color: oklch(77% 0.152 181.912);
 
-  &:hover {
-    color: rgb(195 197 221);
-  }
-}
+		&:hover {
+			color: #1564be;
+		}
+	}
 
-ol {
-  list-style: decimal;
-}
+	ol {
+		list-style: decimal;
+	}
 
-ol li::marker {
-  color: rgb(228 225 233);
-}
+	ol li::marker {
+		color: rgb(228 225 233);
+	}
 
-ul {
-  list-style: inside;
-}
+	ul {
+		list-style: inside;
+	}
 
-ul li::marker {
-  color: rgb(228 225 233);
+	ul li::marker {
+		color: rgb(228 225 233);
+	}
 }

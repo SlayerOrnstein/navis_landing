@@ -10,15 +10,14 @@ export default function FAQ() {
 				<style>{CSS}</style>
 				<link rel="stylesheet" href="/markdown.css" />
 			</head>
-			<div class="bg-base-200 min-h-screen">
-				<div
-					class="py-8 px-96 markdown-body "
-					data-color-mode="dark"
-					data-dark-theme="dark"
-					// deno-lint-ignore react-no-danger
-					dangerouslySetInnerHTML={{ __html: document }}
-				/>
-			</div>
+			<div
+				id="faq"
+				class="py-8 px-96 markdown-body bg-base-200 min-h-screen"
+				data-color-mode="dark"
+				data-dark-theme="dark"
+				// deno-lint-ignore react-no-danger
+				dangerouslySetInnerHTML={{ __html: document }}
+			/>
 		</>
 	);
 }
