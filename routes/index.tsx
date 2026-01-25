@@ -120,19 +120,6 @@ export default define.page(function Home() {
 					</a>
 				</div>
 			</section>
-
-			<footer className="footer footer-horizontal footer-center text-center text-gray-400 py-16">
-				<i>
-					Built by{' '}
-					<a href="https://github.com/SlayerOrnstein" className="text-accent" target="_blank" rel="noopener">
-						SlayerOrnstein/HydroNav
-					</a>{' '}
-				</i>
-				<i>Warframe and the Warframe logo are registered trademarks of Digital Extremes Ltd.</i>
-				<a href="https://www.buymeacoffee.com/HydroNav" target="_blank" rel="noopener">
-					<img src="https://cdn.buymeacoffee.com/buttons/v2/arial-yellow.png" alt="Buy Me A Coffee" className="h-20" />
-				</a>
-			</footer>
 		</div>
 	);
 });
