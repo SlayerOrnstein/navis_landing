@@ -15,7 +15,7 @@ export default function DropZone() {
 			<div
 				onDragOver={handleDragOver}
 				onDrop={handleDrop}
-				class={`flex justify-center items-center size-40 lg:size-80 ${
+				class={`flex justify-center items-center size-40 md:size-60 lg:size-80 ${
 					codeSignal.value ? '' : 'border-2 border-dashed hover:cursor-pointer'
 				} rounded-xl border-secondary `}
 			>
