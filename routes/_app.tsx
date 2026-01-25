@@ -1,22 +1,36 @@
-import { Head } from "fresh/runtime";
-import TopBar from "../components/TopBar.tsx";
-import { define } from "../utils/utils.ts";
+import { Head } from 'fresh/runtime';
+import TopBar from '../components/TopBar.tsx';
+import { define } from '../utils/utils.ts';
 
 export default define.page(function App({ Component }) {
-  return (
-    <html lang="en">
-      <head>
-        <meta charset="utf-8" />
-        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-        <title>Cephalon Navis</title>
-      </head>
-      <body>
-        <Head>
-          <title>Cephalon Navis</title>
-        </Head>
-        <TopBar></TopBar>
-        <Component />
-      </body>
-    </html>
-  );
+	return (
+		<html lang="en">
+			<head>
+				<meta charset="utf-8" />
+				<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+				<title>Cephalon Navis</title>
+				<meta name="description" content="An app inspired by Warframe Hub" />
+
+				<meta property="og:url" content="https://navis.minilabs.dev/" />
+				<meta property="og:type" content="website" />
+				<meta property="og:title" content="Cephalon Navis" />
+				<meta property="og:description" content="An app inspired by Warframe Hub" />
+				<meta property="og:image" content="/static/banner.jpg" />
+
+				<meta name="twitter:card" content="summary_large_image" />
+				<meta property="twitter:domain" content="navis.minilabs.dev" />
+				<meta property="twitter:url" content="https://navis.minilabs.dev/" />
+				<meta name="twitter:title" content="Cephalon Navis" />
+				<meta name="twitter:description" content="An app inspired by Warframe Hub" />
+				<meta name="twitter:image" content="/static/banner.jpg" />
+			</head>
+			<body>
+				<Head>
+					<title>Cephalon Navis</title>
+				</Head>
+				<TopBar></TopBar>
+				<Component />
+			</body>
+		</html>
+	);
 });
