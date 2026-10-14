@@ -1,20 +1,22 @@
-import discordLogo from '../assets/Discord-Logo.svg';
-import GooglePlayBadge from '../assets/GooglePlayBadge.svg';
-import FeatureCard from '../components/FeatureCard.tsx';
-import Button from '../islands/Button.tsx';
+import Image from 'next/image';
+import Button from '@/components/button';
+import FeatureCard from '@/components/feature_card';
+import DiscordLogo from '/Discord-Logo.svg';
+import GooglePlayBadge from '/GooglePlayBadge.svg';
+import NavisIcon from '/icon.svg';
 
-import { define } from '../utils/utils.ts';
-
-export default define.page(function Home() {
+export default function Home() {
 	return (
 		// Hero
-		<div class="mx-auto bg-base-300 min-h-screen">
+		<div className="mx-auto bg-base-300 min-h-screen">
 			<section className="hero bg-base-100 min-h-150 items-start">
 				<div className="hero-content text-center">
 					<div className="max-w-md">
-						<img className="h-90" src="logo.svg" alt="Cephalon Navis" />
+						<img className="h-90" src={NavisIcon} alt="Cephalon Navis" />
 						<h1 className="text-5xl font-bold text-primary">Cephalon Navis</h1>
-						<p className="pt-2 text-xl font-light">An app inspired by Warframe Hub</p>
+						<p className="pt-2 text-xl font-light">
+							An app inspired by Warframe Hub
+						</p>
 						<div className="flex gap-1 md:gap-2 lg:gap-8 justify-center pt-8 text-xl">
 							<Button target="install">Install Now</Button>
 							<Button type="secondary" target="features">
@@ -65,12 +67,18 @@ export default define.page(function Home() {
 						title="Smart Notifications"
 						subtitle="Customizable filtered notifications for the events and alerts that matter most to you."
 					/>
-					<FeatureCard title="1999 Calender" subtitle="Count the days before your new year kiss and grab some loot." />
+					<FeatureCard
+						title="1999 Calender"
+						subtitle="Count the days before your new year kiss and grab some loot."
+					/>
 					<FeatureCard
 						title="Synthesis Targets"
 						subtitle="Help Cephalon Simaris scan those persky targets with Navis' target location data"
 					/>
-					<FeatureCard title="Inventory tracking" subtitle="Helps you track mastered weapons in your arsenal." />
+					<FeatureCard
+						title="Inventory tracking"
+						subtitle="Helps you track mastered weapons in your arsenal."
+					/>
 				</div>
 			</section>
 
@@ -78,24 +86,32 @@ export default define.page(function Home() {
 			<section className="py-24 px-16">
 				<h1 className="text-3xl text-center font-bold pb-4">Help Translate</h1>
 				<p className="text-xl text-center">
-					Make Cephalon Navis accessible to Tenno around the world by contributing translations for the app interface
-					and Warframe worldstate data.
+					Make Cephalon Navis accessible to Tenno around the world by
+					contributing translations for the app interface and Warframe
+					worldstate data.
 				</p>
 				<div className="flex gap-4 justify-center py-8">
-					<Button target="https://crowdin.com/project/genesis-parser">Translate Data</Button>
+					<Button target="https://crowdin.com/project/genesis-parser">
+						Translate Data
+					</Button>
 					<Button target="https://navis.t.warframestat.us/" type="secondary">
 						Translate App
 					</Button>
 				</div>
 				<p className="text-sm text-center text-gray-400">
-					All translations are managed through Crowdin, if you have to choose one, data is more important as it changes
-					more frequently.
+					All translations are managed through Crowdin, if you have to choose
+					one, data is more important as it changes more frequently.
 				</p>
 			</section>
 
 			{/* Store buttons */}
-			<section id="install" className="flex flex-col bg-base-100 py-16 text-center justify-center items-center">
-				<h1 className="text-3xl text-center font-bold pb-4">Download Cephalon Navis</h1>
+			<section
+				id="install"
+				className="flex flex-col bg-base-100 py-16 text-center justify-center items-center"
+			>
+				<h1 className="text-3xl text-center font-bold pb-4">
+					Download Cephalon Navis
+				</h1>
 				<p className="text-base text-gray-300">Available on Android</p>
 				<a
 					href="https://play.google.com/store/apps/details?id=com.cephalon.navis"
@@ -103,23 +119,35 @@ export default define.page(function Home() {
 					target="_blank"
 					className="pt-8"
 				>
-					<img src={GooglePlayBadge} alt="Google Play" width={200} />
+					<Image
+						src={GooglePlayBadge}
+						alt="Google Play"
+						width={200}
+						unoptimized
+					/>
 				</a>
 			</section>
 
 			{/* Comunnity */}
 			<section className="py-8 px-16 text-center">
-				<h1 className="text-3xl text-center font-bold pb-4">Join the Community</h1>
+				<h1 className="text-3xl text-center font-bold pb-4">
+					Join the Community
+				</h1>
 				<i className="text-gray-400">
-					Cephalon Navis is supported by the WFCD a community of Tenno who develop apps and tools for the Warframe
-					community.
+					Cephalon Navis is supported by the WFCD a community of Tenno who
+					develop apps and tools for the Warframe community.
 				</i>
 				<div className="flex flex-row justify-center py-8">
-					<a className="btn bg-[#e0e3ff] py-8 px-8" href="https://discord.gg/jGZxH9f" rel="noopener" target="_blank">
-						<img className="size-50" src={discordLogo} alt="Discord" />
+					<a
+						className="btn bg-[#e0e3ff] py-8 px-8"
+						href="https://discord.gg/jGZxH9f"
+						rel="noopener"
+						target="_blank"
+					>
+						<Image src={DiscordLogo} alt="Discord" width={200} unoptimized />
 					</a>
 				</div>
 			</section>
 		</div>
 	);
-});
+}

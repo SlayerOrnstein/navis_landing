@@ -1,7 +1,11 @@
+'use client'
+
+import type React from "react";
+
 interface ButtonProps {
 	target: string;
 	type?: 'primary' | 'secondary';
-	children: preact.ComponentChildren;
+	children: React.ReactNode;
 }
 
 export default function Button({ target: targetId, type = 'primary', children }: ButtonProps) {
