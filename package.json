@@ -34,6 +34,7 @@
 	"scripts": {
 		"dev": "vite dev",
 		"build": "vite build",
-		"start": "vinext start"
+		"start": "vinext start",
+		"lint:fix": "npx biome lint --write"
 	}
 }

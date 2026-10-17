@@ -1,16 +1,16 @@
 'use client';
 
 import { useState } from 'react';
-import QRCodeImage, { type ValidPlatform } from '@/components/qrcode';
 import HelpGuide from '@/components/help_guide';
+import QRCodeImage, { type ValidPlatform } from '@/components/qrcode';
 
 export default function Inventoria() {
 	const [id, setId] = useState<string | undefined>(undefined);
 	const [platform, setPlatform] = useState<ValidPlatform | undefined>(undefined);
 
 	return (
-		<div className='flex flex-col justify-center items-center min-h-screen bg-base-300 pt-24'>
-			<div className='flex flex-row items-center gap-12'>
+		<div className='flex justify-center items-center min-h-screen bg-base-300 pt-24'>
+			<div className='flex flex-col lg:flex-row items-center gap-12'>
 				<QRCodeImage id={id} platform={platform} />
 
 				<fieldset className='fieldset flex flex-col items-end bg-base-200 border-base-300 rounded-box w-xs border p-4 gap-4'>
