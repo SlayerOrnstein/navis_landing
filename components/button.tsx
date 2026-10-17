@@ -1,6 +1,6 @@
-'use client'
+'use client';
 
-import type React from "react";
+import type React from 'react';
 
 interface ButtonProps {
 	target: string;
@@ -20,7 +20,7 @@ export default function Button({ target: targetId, type = 'primary', children }:
 	const className = `btn md:btn-wide btn-primary ${type === 'primary' ? '' : 'btn-outline'}`;
 
 	return (
-		<button className={className} type="button" onClick={handleClick} title={targetId}>
+		<button className={className} type='button' onClick={handleClick} title={targetId}>
 			{children}
 		</button>
 	);

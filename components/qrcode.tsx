@@ -17,18 +17,11 @@ function createQRCode(id: string, platform: ValidPlatform) {
 
 export default function QRCodeImage(props: CodeProps) {
 	const { id, platform } = props;
-	const className =
-		'size-40 md:size-60 lg:size-80 border-2 rounded-xl border-secondary';
+	const className = 'size-40 md:size-60 lg:size-80 border-2 rounded-xl border-secondary';
 
 	if (id === undefined || platform === undefined) {
 		return <div className={className}></div>;
 	}
 
-	return (
-		<img
-			src={createQRCode(id, platform)}
-			className={className}
-			alt="inventoria-setup-info"
-		/>
-	);
+	return <img src={createQRCode(id, platform)} className={className} alt='inventoria-setup-info' />;
 }

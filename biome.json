@@ -10,17 +10,22 @@
 	},
 	"formatter": {
 		"enabled": true,
-		"indentStyle": "tab"
+		"indentStyle": "tab",
+		"lineWidth": 120
 	},
 	"linter": {
 		"enabled": true,
+		"domains": {
+			"tailwind": "all"
+		},
 		"rules": {
 			"preset": "recommended"
 		}
 	},
 	"javascript": {
 		"formatter": {
-			"quoteStyle": "single"
+			"quoteStyle": "single",
+			"jsxQuoteStyle": "single"
 		}
 	},
 	"assist": {
