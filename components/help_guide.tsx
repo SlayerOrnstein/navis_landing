@@ -15,7 +15,7 @@ export default function HelpGuide() {
 				Need Help?
 			</button>
 			<dialog id='help_guide' className='modal'>
-				<div className='modal-box text-center max-w-none w-2xl'>
+				<div className='modal-box text-center max-w-none w-xl lg:w-2xl'>
 					<h1 className='font-bold text-2xl underline'>How to find your Account ID</h1>
 					<div className='py-4'>
 						<p className='py-2 text-lg'>
